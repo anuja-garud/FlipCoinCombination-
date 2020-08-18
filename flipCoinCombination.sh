@@ -118,4 +118,13 @@ echo "Percentage of THT is $((${coinDictionary[THT]}*100/20))%"
 echo "Percentage of TTH is $((${coinDictionary[TTH]}*100/20))%"
 echo "Percentage of TTT is $((${coinDictionary[TTT]}*100/20))%"
 
+#for sorting
 
+echo ${coinDictionary[@]} #//values
+echo ${coinDictionary[*]} #//values
+echo ${!coinDictionary[*]} #//key
+
+for i in ${!coinDictionary[@]}
+do
+  echo $i ${coinDictionary[$i]}
+done
